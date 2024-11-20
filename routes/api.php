@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-Route::middleware(['auth:api'])->group(function(){
+//auth:
+Route::middleware(['api/productos'])->group(function(){
     Route::get('/productos', [ProductoController::class, 'ListarProductos']);
     Route::get('/producto/{id}', [ProductoController::class, 'listarProductoId']);
     Route::post('/crear-producto',[ProductoController::class, 'crearProducto']);
